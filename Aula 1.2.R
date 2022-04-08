@@ -13,7 +13,7 @@ limitesclas <- c(15.68, 18.68, 21.68, 24.68, 27.68, 30.68, 33.68)
 
 classes<-c("15.68 - 18.68", "18.68 - 21.68", "21.68 - 24.68", "24.68 - 27.68",
            "27.68 - 30.68", "30.68 - 33.68")
-
+cat("vector=", IMC$IMCplan)
 Freq <- table(cut(IMC$IMCplan, breaks=limitesclas, right=FALSE, labels=classes))
 Freq
 
