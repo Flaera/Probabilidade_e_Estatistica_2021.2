@@ -23,7 +23,10 @@ FreqRelAc = cumsum(FreqRel)
 notes <- table(cut(vector, breaks=limitesclas, right=FALSE, labels=classes))
 notes
 #FreqAbso;FreqRel;FreqRelAbs;FreqRelAc
-tab_resul <- cbind(notes, FreqRel<-round(FreqRel, digits=2),
-                   FreqRelAbs<-round(FreqRelAbso, digits=2),
-                   FreqRelAc<-round(FreqRelAc, digits=2))
+#tab_resul <- cbind(notes, FreqRel<-round(FreqRel, digits=2),
+ #                  FreqRelAbs<-round(FreqRelAbso, digits=2),
+  #                 FreqRelAc<-round(FreqRelAc, digits=2))
+tab_resul <- cbind(notes, FreqRel,
+                  FreqRelAbso,
+                  FreqRelAc)
 tab_resul
