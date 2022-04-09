@@ -11,4 +11,4 @@ color_skin <- data_excel$TP_COR_RACA
 table_mun_col = table(municipio, color_skin)
 table_mun_col
 
-barplot(table_mun_col, col="green", beside=TRUE)
+barplot(table_mun_col, col="green", beside=TRUE, main="Cor da pele por município em AL no ENEM de 2019")
