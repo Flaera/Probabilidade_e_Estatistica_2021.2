@@ -1,23 +1,23 @@
 url_linux <- ("/home/flaera/Área de Trabalho/Ufal AC Simões/ufal_periodo2021.2/pe/pratica com r_studio/Atividade 1/ENEM_AL_EXCEL_AJUS_OKSNZ.xlsx")
 library(readxl)
+library(tcltk)
 
-limitesclas <- c(300, 400, 500, 600, 700, 800, 900, 1000)
-classes <- c("300 - 400", "400 - 500", "500 - 600", "600 - 700", "700 - 800", "800 - 900", "900 - 1000")
+dados_excel <- read_excel("ENEM_AL_EXCEL_AJUS_OKSNZ.xlsx", sheet=1)
+vector      <- dados_excel$NOTA_ENEN
 
-dados_excel = read_excel(path=url_linux, sheet=1)
-vector = dados_excel$NOTA_ENEN
+frequencia_abs <- table(cut(vector, breaks = quantile(vector),
+               labels = c("318.44 - 455.20", "455.20 - 497.22",
+               "497.22 - 553.04", "553.04 - 796.14")))
+frequencia_abs
 
-notes <- table(cut(vector, breaks=limitesclas, right=FALSE, labels=classes))
-#notes <- table(vector)
-notes
+frequencia_rel <- prop.table(frequencia_abs) * 100
+soma_freq_abs <- cumsum(frequencia_abs)
+soma_freq_rel <- cumsum(frequencia_rel)
+tabela <- cbind(frequencia_abs, soma_freq_abs, frequencia_rel, soma_freq_rel)
+tabela
 
-FreqRel = prop.table(notes)
-FreqAbsoAc = cumsum(notes)
-FreqRelAc = cumsum(FreqRel)
+windows()
+boxplot(vector, horizontal=TRUE)
 
-boxplot(notes, horizontal=TRUE)
-
-#FreqAbso;FreqRel;FreqRelAbso;FreqRelAc
-
-tab_resul <- cbind(notes, FreqRel, FreqAbsoAc, FreqRelAc)
-tab_resul
+prompt  <- "Aperte a barra de espaco para fechar o grafico"
+capture <- tk_messageBox(message = prompt)
