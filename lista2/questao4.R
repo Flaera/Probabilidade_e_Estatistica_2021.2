@@ -10,4 +10,4 @@ z
 erro = z*sd/sqrt(n)
 
 cat('[',mean-erro,'-',mean+erro,']')
-#Aceita-se H0 pois o valorm 45 esta na zona de RNR
+#Aceita-se H0 pois o valor 45 esta na zona de RNR

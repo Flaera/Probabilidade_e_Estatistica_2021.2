@@ -1,0 +1,2 @@
+1. Em comentários estão anotações de desenvolvimento e resoluções para algumas questões.
+2. As reticências (...) após um comentário significa que o comentário abaixo complementa o comentário atual.
