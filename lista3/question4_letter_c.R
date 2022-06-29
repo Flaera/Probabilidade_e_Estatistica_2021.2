@@ -42,3 +42,9 @@ b
 # Logo a equaão da reta é:
 cat("Equação da reta:")
 cat("y = (",a,")*x + (",b,")")
+
+#Calculando valores de y:
+#Para x=5:
+cat("Com x=5, y = ",a*5+b)
+#Para x=12:
+cat("Com x=12, y = ",a*12+b)
