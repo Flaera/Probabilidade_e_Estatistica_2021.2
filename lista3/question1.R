@@ -9,6 +9,7 @@ f_table
 
 result = aov(formula=(f_table$Taxa_de_cevada ~ factor(f_table$Fornecedores)))
 anova(result)
+#ERRADAAAA!!
 #Rejeita-se H0 por Pr(>F) ter 4%, mas isso não descreve as diferenças, então roda-se o TukeyHSD
 TukeyHSD(result)
 #Observando-se as diferenças entre diff e p adj, há uma alta diff entre o fornecedor 2 e 1...

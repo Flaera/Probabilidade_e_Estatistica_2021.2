@@ -11,3 +11,4 @@ result = aov(formula=f_impress$Nota_dos_funcionarios ~ factor(f_impress$Fabricas
 anova(result)
 # Como p-value é inferior a 0.05 rejeita-se H0, ou seja há um nivel de significância razoável...
 # nas amostras.
+#ERRADA!!!!!!!!!!!

@@ -42,3 +42,5 @@ b
 # Logo a equaão da reta é:
 cat("Equação da reta:")
 cat("y = (",a,")*x + (",b,")")
+
+#ERRADA!!!!!!!!!!

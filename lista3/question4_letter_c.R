@@ -48,3 +48,4 @@ cat("y = (",a,")*x + (",b,")")
 cat("Com x=5, y = ",a*5+b)
 #Para x=12:
 cat("Com x=12, y = ",a*12+b)
+#ERRADA!!!!!!!!!!!!!!!

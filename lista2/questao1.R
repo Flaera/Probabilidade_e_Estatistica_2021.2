@@ -1,6 +1,6 @@
 var = 14
 sample = 120
-media_prod = 9
+media = 9
 alfa = 0.1
 
 z = qnorm(1-alfa/2,0,1)
