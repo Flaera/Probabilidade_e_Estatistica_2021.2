@@ -3,12 +3,15 @@ f_impress = read.table(
   header=TRUE, sep=',', dec='.')
 f_impress
 
-#Testando a normalidade das amostras:
+#Testando a homogeneidade das amostras:
 bartlett.test(f_impress$Nota_dos_funcionarios, f_impress$Fabricas)
-#Como p-value > alfa (5%), aceita-se a normalidade das amostras e prossegue os cálculos com elas.
+#Como p-value > alfa (5%), aceita-se a homogeneidade das amostras e prossegue os cálculos com elas.
+
+#Testando a normaidade das amostras:
+shapiro.test(f_impress$Nota_dos_funcionarios)
+#Como p-value maior que 5% aceita-se a normalidade das amostras
 
 result = aov(formula=f_impress$Nota_dos_funcionarios ~ factor(f_impress$Fabricas))
 anova(result)
-# Como p-value é inferior a 0.05 rejeita-se H0, ou seja há um nivel de significância razoável...
+# Como p-value é inferior a 0.05 rejeita-se H0, ou seja não há um nível de variância razoável...
 # nas amostras.
-#ERRADA!!!!!!!!!!!

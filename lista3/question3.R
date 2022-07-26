@@ -9,4 +9,3 @@ shapiro.test(jacares_locais$Quantidades)
 result <- aov(formula=jacares_locais$Quantidades ~ factor(jacares_locais$Locais))
 anova(result)
 #Percebe-se pelo resultados da anova() que F crítico < F value, logo rejeita-se H0
-#ERRADA!!!!!
